@@ -14,3 +14,10 @@
   * 程式流程
   * App Inventor 開發程式
 * [Prototype](#Prototype)
+
+
+<br> 
+
+
+## 裝置設計 Device Design
+### 使用元件
