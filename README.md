@@ -60,4 +60,32 @@ L293D可控制最多4個DC馬達或單個步進馬達，一般用來控制2個�
 
 <img src="https://github.com/jaydenjian/3-axis-CNC-Plotter-remote-control-by-mobile-phone/blob/master/media/mp1584en%20model.png" width=20%/>
 
+
 <br> 
+
+
+### 馬達IC選用與電路圖 <br>
+<img src="https://github.com/jaydenjian/3-axis-CNC-Plotter-remote-control-by-mobile-phone/blob/master/media/L293D_Model.png" width=20% align="right"/>
+<br> 
+
+原定直接使用市面上販售的L293D馬達控制模組，但因為以下理由，而改用其他方案： <br> 
+* 一塊馬達控制版**占掉整塊UNO板腳位**，導致其它腳位無法使用。 <br> 
+
+* 馬達控制板除了可以控制多顆伺服馬達及多顆步進馬達以外，沒有其他進階功能，但是這裡**只需控制2個步進及1個伺服馬達**，剩下的控制腳位沒有用到。<br><br>
+
+
+> 解決方案:  <br> 
+**直接使用兩個L293D晶片來做馬達控制模組設計。** <br> <br>
+如前所述，L293D可控制最多4個DC馬達或單個步進馬達，一般用來控制2個馬達作正轉及反轉,並可由PWM控制轉速。由於**雙H橋設計**可使得輸出電流、電壓相反，且可同時控多顆馬達的特性，成為我們考慮使用此IC的原因。 <br> 
+
+<img src="hhttps://github.com/jaydenjian/3-axis-CNC-Plotter-remote-control-by-mobile-phone/blob/master/media/Doul-H.png" width=50% align="center"/>
+
+<br> 
+
+
+
+
+
+
+
+
