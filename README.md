@@ -12,7 +12,7 @@
   * 平台設計
 * [程式設計 Programming](#程式設計-Programming)
   * 程式流程
-  * App Inventor 開發程式
+  * App Inventor 開發程式 與 Arduino藍芽模組連接
 * [Prototype](#Prototype)
 
 
@@ -84,6 +84,8 @@ L293D可控制最多4個DC馬達或單個步進馬達，一般用來控制2個�
 <p align="center"><img src="https://github.com/jaydenjian/3-axis-CNC-Plotter-remote-control-by-mobile-phone/blob/master/media/CircuitFinal.png" width=90% >
 <br> <p align="center"> 馬達驅動電路設計 <br><br>
 
+<p align="center"><img src="https://github.com/jaydenjian/3-axis-CNC-Plotter-remote-control-by-mobile-phone/blob/master/media/Circuit_.png" width=60% >
+<br> <p align="center"> 實際接線圖 <br><br>
 
 <br>
 
@@ -114,4 +116,52 @@ L293D可控制最多4個DC馬達或單個步進馬達，一般用來控制2個�
 
 
 ## 程式設計 Programming
+### 程式流程
+* Main Flow
+<img src="https://github.com/jaydenjian/3-axis-CNC-Plotter-remote-control-by-mobile-phone/blob/master/media/PictureAnalysisFlow.png" width=60%/>
+<br>
 
+* Gcode Execute Flow
+<img src="https://github.com/jaydenjian/3-axis-CNC-Plotter-remote-control-by-mobile-phone/blob/master/media/GcodeExecuteFlow.png" width=70%/>
+<br>
+
+* App Pass Message Flow
+<img src="https://github.com/jaydenjian/3-axis-CNC-Plotter-remote-control-by-mobile-phone/blob/master/media/AppFlow.png" width=70%/>
+<br>
+
+### App Inventor 開發程式 與 Arduino藍芽模組連接
+* **App Inventor** —— 用於建置app的圖形化介面開發環境。<br>
+此處利用他先開發了兩種APP，其一是僅一執行按鈕去執行繪圖動作，其二是直接操控三軸繪圖機做前、後、左、右移動及起筆、落筆動作，最後再將兩者結合。 <br> 
+
+<img src="https://github.com/jaydenjian/3-axis-CNC-Plotter-remote-control-by-mobile-phone/blob/master/media/APP_Window1.png" width=30% ><img src="https://github.com/jaydenjian/3-axis-CNC-Plotter-remote-control-by-mobile-phone/blob/master/media/APP_Window2.png" width=32% >
+
+<br>
+<img src="https://github.com/jaydenjian/3-axis-CNC-Plotter-remote-control-by-mobile-phone/blob/master/media/App_Block1.png" width=60% > <br>
+
+<img src="https://github.com/jaydenjian/3-axis-CNC-Plotter-remote-control-by-mobile-phone/blob/master/media/App_Block2.png" width=80% >
+<br>
+<br>
+
+* **Arduino藍芽模組連接** 
+
+由於Arduino並沒有Serial1的序列埠，因此我們重設了新的序列埠BTSerial，而經測試過後，發現Arduino本身的Tx,Rx輸出入腳(PIN0,PIN1)，會有bug導致程式無法燒錄，故又自行定義了新的Tx,Rx(PIN12,PIN13)，此外，包率經過測試，改為57600。
+
+> 程式碼請參照此：[Arduino藍芽連接程式碼](https://github.com/jaydenjian/3-axis-CNC-Plotter-remote-control-by-mobile-phone/blob/master/BluetoothForPrinter_self_control.ino)
+
+<br>
+<br>
+
+
+
+## Prototype
+* Mobile Phone Control
+<br> <a href="https://youtu.be/gG9Y0EEsjDo" target="_blank"><img src="https://github.com/jaydenjian/3-axis-CNC-Plotter-remote-control-by-mobile-phone/blob/master/media/MobilePhoneControl.png" 
+width=30% /></a>
+<br> 點擊圖像觀看影片
+<br>
+
+* Plotting
+<br> <a href="https://youtu.be/-ubjCdSmq3U" target="_blank"><img src="https://github.com/jaydenjian/3-axis-CNC-Plotter-remote-control-by-mobile-phone/blob/master/media/Plotting.png" 
+width=70% /></a>
+<br> 點擊圖像觀看影片
+<br>
