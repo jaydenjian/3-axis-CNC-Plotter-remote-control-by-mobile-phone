@@ -40,17 +40,24 @@
 
 <br> 
 
-* **L293D(2個)：**
+* **L293D(2個)：** <br>
+L293D可控制最多4個DC馬達或單個步進馬達，一般用來控制2個馬達作正轉及反轉,並可由PWM控制轉速。<br>
+這裡使用L293D來進行**馬達控制模組設計**。
+
 <img src="https://github.com/jaydenjian/3-axis-CNC-Plotter-remote-control-by-mobile-phone/blob/master/media/L293D.png" width=10%/>
 
 <br> 
 
-* **藍芽模組 HC-06：**
+* **藍芽模組 HC-06：** <br>
+使用手機連結藍芽模組，操控繪圖機。
+
 <img src="https://github.com/jaydenjian/3-axis-CNC-Plotter-remote-control-by-mobile-phone/blob/master/media/Bluetooth%20model.png" width=20%/>
 
 <br> 
 
-* **降壓模組 mp1584en：**
+* **降壓模組 mp1584en：** <br>
+考慮供電問題，使用12V電池供電，因Arduino輸入電壓為5V，故使用降壓模組，將12V降為5V來驅動Arduino。
+
 <img src="https://github.com/jaydenjian/3-axis-CNC-Plotter-remote-control-by-mobile-phone/blob/master/media/mp1584en%20model.png" width=20%/>
 
 <br> 
